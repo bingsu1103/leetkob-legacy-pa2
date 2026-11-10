@@ -42,7 +42,6 @@ function publishedResponse(lab: Lab): PublishLabResponse {
 }
 
 export function buildApp(options: AppOptions): FastifyInstance {
-  const deliberateUnusedValue = "CI must reject this commit";
   const app = Fastify({ logger: options.logger ?? false });
   const now = options.now ?? (() => new Date());
 
