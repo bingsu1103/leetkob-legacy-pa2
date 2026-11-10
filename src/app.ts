@@ -89,10 +89,6 @@ export function buildApp(options: AppOptions): FastifyInstance {
         );
       }
 
-      if (lab.publishedAt !== null) {
-        return reply.code(200).send(publishedResponse(lab));
-      }
-
       const currentTime = now();
       if (currentTime < lab.deadline) {
         return sendProblem(
