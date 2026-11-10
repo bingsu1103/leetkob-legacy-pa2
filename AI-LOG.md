@@ -31,3 +31,19 @@ Asked for: verify the locked dependency tree before committing the PA#2 baseline
 Kept: exact versions and the reproducible `npm ci` workflow.
 Changed: `npm audit` found newly published high/critical advisories in the initially selected Fastify 5.6 and Vitest 4.0 releases; upgraded to patched Fastify 5.12 and Vitest 5.1, then reran the complete gate.
 Rejected: submitting merely because lint/types/tests were green; those checks do not prove the dependency tree has no known vulnerability.
+
+## 2026-11-10 — GitHub evidence run and billing-lock diagnosis
+
+Tool: OpenAI Codex.
+Asked for: create the public repository, protect `main`, and produce the required red-to-green CI evidence.
+Kept: the public repository, required `quality-gate` branch check, PR-only changes, linear history, stale-review dismissal, and force-push/deletion blocks.
+Changed: stopped treating the red PR as code evidence after the GitHub check annotation showed that no runner started because the owner's account was billing-locked; documented the incident as infrastructure-only and submitted a support ticket.
+Rejected: claiming the red check as proof that lint or contract tests caught a defect; GitHub ran zero workflow steps, so that claim would be false.
+
+## 2026-11-10 — local submission candidate
+
+Tool: OpenAI Codex.
+Asked for: finish every PA#2 artifact that does not depend on GitHub Actions and prepare a ZIP candidate.
+Kept: strict local lint, format, type, contract-test, build, coverage and dependency-audit gates.
+Changed: added a reproducible local verification record, concrete future model spending ceilings, and an explicit pending-evidence checklist.
+Rejected: inflating the self-assessment to 100 while PR/tag CI links are still unavailable; the candidate remains 75/100 until those links are real.
