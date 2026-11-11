@@ -21,6 +21,7 @@ The public repository, protected branch, red-to-green gate evidence, and deliber
 | Pull request where a red required check blocked merge             | PR #1: https://github.com/bingsu1103/leetkob/pull/1; lint failure: https://github.com/bingsu1103/leetkob/actions/runs/42940994688                     |
 | Commit that turned that pull request green                        | Commit `68f2d63`: https://github.com/bingsu1103/leetkob/commit/68f2d63; green run: https://github.com/bingsu1103/leetkob/actions/runs/42941097375     |
 | Green pull request                                                | PR #1 after the fix: https://github.com/bingsu1103/leetkob/pull/1                                                                                     |
+| Final submission pull request                                     | PR #3: https://github.com/bingsu1103/leetkob/pull/3; green run: https://github.com/bingsu1103/leetkob/actions/runs/42941494329                        |
 | CI run for submitted `pa2` tag                                    | Exact tag-filtered workflow view: https://github.com/bingsu1103/leetkob/actions/workflows/ci.yml?query=branch%3Apa2                                   |
 | Deliberate contract break caught by CI                            | Closed, never merged PR #2: https://github.com/bingsu1103/leetkob/pull/2; failing run: https://github.com/bingsu1103/leetkob/actions/runs/42941206360 |
 

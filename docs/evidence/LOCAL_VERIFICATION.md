@@ -41,7 +41,7 @@ The expected tracked environment file is only `.env.example`; the history search
 
 `main` was protected before the evidence branches were pushed. The exported rule in `branch-protection.json` requires the `quality-gate` status, an up-to-date branch, a pull request and one approval; it applies to administrators and disables force pushes/deletion.
 
-GitHub Actions access was restored on 2026-11-11. PR #1 demonstrates the required lint check blocking a merge and then passing after a code-only fix. Closed PR #2 demonstrates the idempotency contract test rejecting a code-only contract violation. `PA2.md` links each PR, commit and run.
+GitHub Actions access was restored on 2026-11-11. PR #1 demonstrates the required lint check blocking a merge and then passing after a code-only fix. Closed PR #2 demonstrates the idempotency contract test rejecting a code-only contract violation. Final submission PR #3 is green. `PA2.md` links each PR, commit and run.
 
 ## Final remote checks
 
