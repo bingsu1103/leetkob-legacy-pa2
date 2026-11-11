@@ -45,7 +45,7 @@ The PA#2 harness accepts deterministic test authorization such as `Authorization
 
 ## Model data and cost (PA#3 policy)
 
-No model is called in PA#2. For PA#3 the provider/model will be recorded before integration in this README and `AI-LOG.md`. Only the statement, constraints, and code after comments, names, and student IDs are removed may leave the system. `MODEL_SPENDING_CAP_USD_PER_LAB` must be set and enforced by both the application and provider account before any real call. Until the provider, model, and measured per-lab cost are filled in, real model calls are prohibited.
+No model is called in PA#2. For PA#3 the provider/model will be recorded before integration in this README and `AI-LOG.md`. Only the statement, constraints, and code after comments, names, and student IDs are removed may leave the system. Before any real call, the provider account must have a hard monthly cap of **USD 5.00** and the application must enforce a **USD 0.50 per-lab cap** through `MODEL_MONTHLY_SPENDING_CAP_USD` and `MODEL_SPENDING_CAP_USD_PER_LAB`. These are safety ceilings, not cost estimates; the measured cost of one lab will replace this note after PA#3 profiling. Until the provider, model, and measured cost are documented, real model calls are prohibited.
 
 Model credentials live only in the deployment secret store. They must never enter Git history, logs, prompts, or the code-judging sandbox.
 
