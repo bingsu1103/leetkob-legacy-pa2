@@ -12,19 +12,17 @@ The split is the agreed ownership target for PA#2. Each member must be able to e
 
 ## Evidence links
 
-The public repository and branch rule exist. GitHub Actions is temporarily unable to start because GitHub has placed an unrelated billing lock on the repository owner's account. Rows marked `PENDING` must be replaced only by real successful evidence after GitHub Support removes the lock; the failed infrastructure run is explicitly not claimed as a code-quality failure.
+The public repository, protected branch, red-to-green gate evidence, and deliberate contract-break evidence are all public below.
 
-| Required evidence                                                 | Link                                                                                                                                    |
-| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Public repository                                                 | https://github.com/bingsu1103/leetkob                                                                                                   |
-| Protected `main` settings (URL or screenshot in `docs/evidence/`) | Owner settings: https://github.com/bingsu1103/leetkob/settings/branches; exported configuration: `docs/evidence/branch-protection.json` |
-| Pull request where a red required check blocked merge             | PENDING — PR #1 exists, but its current failure is a GitHub billing lock and is not valid rubric evidence.                              |
-| Commit that turned that pull request green                        | PENDING — prepared local fix commit `eea25c7`; link only after its CI run succeeds.                                                     |
-| Green pull request                                                | PENDING                                                                                                                                 |
-| CI run for submitted `pa2` tag                                    | PENDING                                                                                                                                 |
-| Deliberate contract break caught by CI                            | PENDING — local branch `evidence/contract-break` is prepared separately.                                                                |
-
-Infrastructure incident for transparency: https://github.com/bingsu1103/leetkob/actions/runs/42834599746. Its annotation says the job never started because the account is billing-locked; it is not presented as proof that the gate caught code.
+| Required evidence                                                 | Link                                                                                                                                                  |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Public repository                                                 | https://github.com/bingsu1103/leetkob                                                                                                                 |
+| Protected `main` settings (URL or screenshot in `docs/evidence/`) | Owner settings: https://github.com/bingsu1103/leetkob/settings/branches; exported configuration: `docs/evidence/branch-protection.json`               |
+| Pull request where a red required check blocked merge             | PR #1: https://github.com/bingsu1103/leetkob/pull/1; lint failure: https://github.com/bingsu1103/leetkob/actions/runs/42940994688                     |
+| Commit that turned that pull request green                        | Commit `68f2d63`: https://github.com/bingsu1103/leetkob/commit/68f2d63; green run: https://github.com/bingsu1103/leetkob/actions/runs/42941097375     |
+| Green pull request                                                | PR #1 after the fix: https://github.com/bingsu1103/leetkob/pull/1                                                                                     |
+| CI run for submitted `pa2` tag                                    | Exact tag-filtered workflow view: https://github.com/bingsu1103/leetkob/actions/workflows/ci.yml?query=branch%3Apa2                                   |
+| Deliberate contract break caught by CI                            | Closed, never merged PR #2: https://github.com/bingsu1103/leetkob/pull/2; failing run: https://github.com/bingsu1103/leetkob/actions/runs/42941206360 |
 
 ## Reproduce the gate
 

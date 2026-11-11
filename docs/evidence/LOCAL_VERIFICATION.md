@@ -1,6 +1,6 @@
-# Local verification — PA#2 submission candidate
+# Local verification — PA#2 final submission
 
-Verified on 2026-11-10 with Node.js 22 and npm 10.
+Verified on 2026-11-11 with Node.js 22 and npm 10.
 
 ## Fresh-install quality gate
 
@@ -41,11 +41,8 @@ The expected tracked environment file is only `.env.example`; the history search
 
 `main` was protected before the evidence branches were pushed. The exported rule in `branch-protection.json` requires the `quality-gate` status, an up-to-date branch, a pull request and one approval; it applies to administrators and disables force pushes/deletion.
 
-GitHub Actions currently cannot allocate a runner because the owner's account has an account-level billing lock. The GitHub Support ticket is outside the repository and contains no project secret. `PA2.md` deliberately leaves every CI-dependent rubric link pending until an actual workflow runs.
+GitHub Actions access was restored on 2026-11-11. PR #1 demonstrates the required lint check blocking a merge and then passing after a code-only fix. Closed PR #2 demonstrates the idempotency contract test rejecting a code-only contract violation. `PA2.md` links each PR, commit and run.
 
-## Remaining remote-only steps
+## Final remote checks
 
-1. Re-run PR #1 after GitHub removes the billing lock and record the red run for its intentional lint failure plus the green run for commit `eea25c7`.
-2. Push/open the prepared `evidence/contract-break` branch and record the failing contract-test run; close it without merging.
-3. Open the final submission PR, obtain the required teammate approval, merge it, tag that commit `pa2`, push the tag, and link its green run.
-4. Update `PA2.md` and `SELF_ASSESSMENT_REPORT.md`, recalculate the total, then regenerate the ZIP with the same number in its filename.
+The final submission branch must be green, the submitted commit must carry the pushed `pa2` tag, and the tag-filtered run linked in `PA2.md` must be green before uploading the ZIP.

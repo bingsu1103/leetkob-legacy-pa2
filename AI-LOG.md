@@ -47,3 +47,11 @@ Asked for: finish every PA#2 artifact that does not depend on GitHub Actions and
 Kept: strict local lint, format, type, contract-test, build, coverage and dependency-audit gates.
 Changed: added a reproducible local verification record, concrete future model spending ceilings, and an explicit pending-evidence checklist.
 Rejected: inflating the self-assessment to 100 while PR/tag CI links are still unavailable; the candidate remains 75/100 until those links are real.
+
+## 2026-11-11 — final CI evidence after access restoration
+
+Tool: OpenAI Codex.
+Asked for: complete every remaining PA#2 rubric item after GitHub Actions access was restored.
+Kept: the protected `main` rule and the same four local/CI commands.
+Changed: created a fresh lint-failing commit on PR #1, verified its merge state was `BLOCKED`, then removed only the unused variable and obtained a green run; separately opened PR #2 with a code-only idempotency break and closed it after the unchanged contract test failed.
+Rejected: reusing the earlier billing-lock failures as rubric evidence; the final links point only to runs whose logs show ESLint or Vitest actually executing and detecting the intended defect.
